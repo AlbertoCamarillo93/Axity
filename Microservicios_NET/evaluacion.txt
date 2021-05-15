@@ -1,0 +1,6 @@
+    Generar diagrama de la solución
+    Corregir funciones de Guardar y consultar por ID
+    Agregar funciones para Actualizar y eliminar
+    Si es posible generar la conexión con la BD y mandar scripts para creación de tablas, de lo contrario manejar Listas
+    Se pueden implementar los campos deseados
+    Guardar su proyecto en Github(No subir como zip) y mandarme por correo la liga para su evaluación.
