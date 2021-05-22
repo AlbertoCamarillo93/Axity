@@ -3,7 +3,7 @@
       
       <mat-form-field>
         <mat-label>Usuario</mat-label>
-        <input Input type="text" placeholder="Nombre de usuario" formControlName="username" />
+        <input matInput type="text" placeholder="Nombre de usuario" formControlName="username" />
         <mat-error *ngIf="formLogin.get('username')?.errors?.email && !formLogin.get('username')?.errors?.required">
           Ingresa un e-mail válido
         </mat-error>
@@ -14,7 +14,7 @@
 
       <mat-form-field>
         <mat-label>Contraseña</mat-label>
-        <input Input type="password" placeholder="Ingresa tu contraseña" formControlName="password" />
+        <input matInput type="password" placeholder="Ingresa tu contraseña" formControlName="password" />
         <mat-error *ngIf="formLogin.get('password')?.errors?.minlength && !formLogin.get('password')?.errors?.required">
           La contraseña debe ser mayor a 3 caracteres
         </mat-error>
@@ -23,7 +23,9 @@
         </mat-error>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" (click)="login()" [disabled]="formLogin.invalid">Ingresar</button>
+      <button mat-raised-button color="primary" (click)="login()" [disabled]="formLogin.invalid || disableButton">
+        Ingresar
+      </button>
     </div>
   </div>
   

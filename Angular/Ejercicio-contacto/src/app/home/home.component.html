@@ -1,0 +1,58 @@
+<h1>Carros</h1>
+
+<button mat-raised-button color="primary" (click)="newItem()">Nuevo</button>
+
+<table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="brand">
+        <th mat-header-cell *matHeaderCellDef>
+            Marca
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.brand}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="modelo">
+        <th mat-header-cell *matHeaderCellDef>
+            Modelo
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.modelo}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef>
+            Año
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.year}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>
+            Actualizar
+        </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" (click)="edit(element)">
+                <mat-icon>chevron_right</mat-icon>
+            </button>   
+        </td>
+    </ng-container>    
+
+    <ng-container matColumnDef="erase">
+        <th mat-header-cell *matHeaderCellDef>
+            Elimiar
+        </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" (click)="erase(element)">
+                <mat-icon>delete</mat-icon>
+            </button>   
+        </td>
+    </ng-container>   
+
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns columns;"></tr>
+</table>

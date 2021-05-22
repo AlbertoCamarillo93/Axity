@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="car-form" [formGroup]="formCar">
+      <h1>{{title}}</h1>
+
+      <mat-form-field>
+        <mat-label>Marca</mat-label>
+        <input matInput type="text" placeholder="Marca" formControlName="brand" />
+            <mat-error *ngIf="formCar.get('brand')?.errors?.required">
+            La marca es requerido
+            </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Modelo</mat-label>
+        <input matInput type="text" placeholder="Modelo" formControlName="modelo" />
+            <mat-error *ngIf="formCar.get('modelo')?.errors?.required">
+            El modelo es requerido
+            </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Año</mat-label>
+        <input matInput type="number" placeholder="Año" formControlName="year" />
+        <mat-error *ngIf="formCar.get('year')?.errors?.required">
+          El año es requerido
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="save()" [disabled]="formCar.invalid || disableButton">
+          Guardar
+      </button>
+
+    </div>
+  </div>
+  
