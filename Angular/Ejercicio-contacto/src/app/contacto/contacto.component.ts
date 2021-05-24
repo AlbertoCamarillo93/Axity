@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { ContactRequest, ContactResponse } from '/home/axity/Documentos/CAP_Angular/AlbertoCamarillo/curso-angular/src/app/model/contacto.model';
+import { ContactRequest, ContactResponse } from '../model/contacto.model';
 
 @Component({
   selector: 'app-contacto',

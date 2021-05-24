@@ -41,30 +41,15 @@ export class CarComponent implements OnInit {
                 this.activateRoute.params.subscribe(parameters => {
                   if (parameters.id) {
                     this.id = parameters.id;
-                    this.dataService.isLoading.next(true);
+                    this.title = 'Actualizar elemento';
 
-                    if(parameters.erase){
-                      this.erase = parameters.erase;
-                      this.car.deleteCar(parameters.id).subscribe({next: data => {
-                        this.statusErase = "Eliminado";
-                        this.dataService.message.next(this.statusErase);
-                      }, error: error => {
-                        this.statusErase = error.message;
-                        this.dataService.message.next(this.statusErase);
-                      }
-                    });
-
-                    this.router.navigate(['home']);
-
-                    }else{
-                      this.title = 'Actualizar elemento';                   
-                      this.car.getSingleCar(parameters.id).subscribe(item => {
+                    this.dataService.isLoading.next(true);                                         
+                    this.car.getSingleCar(parameters.id).subscribe(item => {
                       this.formCar.patchValue(item);
                       /*this.formCar.get('brand')?.setValue(item.brand);
                       this.formCar.get('modelo')?.setValue(item.modelo);
                       this.formCar.get('year')?.setValue(item.year);*/
                     });
-                  }
                   this.dataService.isLoading.next(false);
                 }
                 });
