@@ -43,12 +43,21 @@ export class CarComponent implements OnInit {
 
                     this.dataService.isLoading.next(true);                                         
                     this.car.getSingleCar(parameters.id).subscribe(item => {
+<<<<<<< HEAD
                       //this.formCar.patchValue(item);
                       this.formCar.get('brand')?.setValue(item.brand);
                       this.formCar.get('modelo')?.setValue(item.modelo);
                       this.formCar.get('year')?.setValue(item.year);
                       this.dataService.isLoading.next(false);
                     });                 
+=======
+                      this.formCar.patchValue(item);
+                      /*this.formCar.get('brand')?.setValue(item.brand);
+                      this.formCar.get('modelo')?.setValue(item.modelo);
+                      this.formCar.get('year')?.setValue(item.year);*/
+                    });
+                  this.dataService.isLoading.next(false);
+>>>>>>> 880e34da7378c9f5053a76f511938648133b7d4f
                 }
                 });
               }

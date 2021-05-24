@@ -4,7 +4,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { Router } from '@angular/router';
 import { LoginRequest } from '../model/login.model';
 import { DataService } from '../services/data.service';
-import { LoginService } from '/home/axity/Documentos/CAP_Angular/AlbertoCamarillo/curso-angular/src/app/services/login.service';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
