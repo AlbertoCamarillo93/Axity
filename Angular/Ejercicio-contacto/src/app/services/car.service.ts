@@ -28,8 +28,8 @@ export class CarService {
     
   }
 
-  deleteCar(id?: string): Observable<Car> {
-  return this.hhtp.delete<Car>('https://super-rest.herokuapp.com/test/cars/' + id);
+  deleteCar(id: string): Observable<any> {
+  return this.hhtp.delete('https://super-rest.herokuapp.com/test/cars/' + id);
     }
 }
 

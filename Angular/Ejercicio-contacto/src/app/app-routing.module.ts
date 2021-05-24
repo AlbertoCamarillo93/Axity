@@ -27,10 +27,6 @@ const routes: Routes = [
     component: CarComponent
   },
   {
-    path: 'car/:id/:erase',
-    component: CarComponent
-  },
-  {
     path: '**',
     redirectTo: 'login'
   },

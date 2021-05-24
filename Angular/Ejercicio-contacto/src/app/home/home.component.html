@@ -46,7 +46,7 @@
             Elimiar
         </th>
         <td mat-cell *matCellDef="let element">
-            <button mat-icon-button color="primary" (click)="erase(element)">
+            <button mat-icon-button color="primary" (click)="erase(element._id)">
                 <mat-icon>delete</mat-icon>
             </button>   
         </td>

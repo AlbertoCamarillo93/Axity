@@ -20,16 +20,20 @@ export class HomeComponent implements OnInit {
               private car: CarService,
               private router: Router          
               ) {
-                this.dataService.isLoading.next(true);
-                this.car.getCar().subscribe(cars => {
-                  this.dataSource.data = cars;
-                  this.dataService.isLoading.next(false);
-                }, () => {
-                  this.dataService.isLoading.next(false);
-                  this.dataService.message.next('Lo sentimos, no se pudieron cargar los elementos');
-                  //alert('Lo sentimos, no se pudieron cargar los elementos');
-                });
+                this.loadData();
                }
+
+  loadData(): void{
+    this.dataService.isLoading.next(true);
+    this.car.getCar().subscribe(cars => {
+      this.dataSource.data = cars;
+      this.dataService.isLoading.next(false);
+    }, () => {
+      this.dataService.isLoading.next(false);
+      this.dataService.message.next('Lo sentimos, no se pudieron cargar los elementos');
+    //alert('Lo sentimos, no se pudieron cargar los elementos');
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -44,11 +48,21 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['car']);
   }
 
-  erase(item:Car): void {
-    console.log(item);
+  erase(id: string): void {
     this.dataService.isLoading.next(true);
-    this.router.navigate(['home', item._id, "erase"]);
-     
+    console.log(id);
+    
+    this.car.deleteCar(id).subscribe(eraseCar => {
+      this.dataService.message.next("Auto elmininado");
+      this.loadData();
+      this.dataService.isLoading.next(false);
+    }, () => {
+      this.dataService.isLoading.next(false);
+      this.dataService.message.next('No se pudo eliminar el auto');
+    });
   }
+    //this.router.navigate(['home', _id, "erase"]);
+     
+  
 
 }
