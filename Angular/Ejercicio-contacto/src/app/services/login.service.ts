@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { LoginRequest, LoginResponse} from '/home/axity/Documentos/CAP_Angular/AlbertoCamarillo/curso-angular/src/app/model/login.model';
+import { LoginRequest, LoginResponse} from '../model/login.model';
 
 @Injectable({
   providedIn: 'root'

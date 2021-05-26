@@ -1,4 +1,3 @@
-import { compileNgModuleDeclarationExpression } from '@angular/compiler/src/render3/r3_module_compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,7 +14,7 @@ export class CarComponent implements OnInit {
   formCar: FormGroup = this.formBuilder.group({});
   disableButton = false;
   id: string = '';
-  title = 'Crear Elemento';
+  title = 'Agregar Autómovil';
   
 
   constructor(
@@ -39,26 +38,17 @@ export class CarComponent implements OnInit {
                 this.activateRoute.params.subscribe(parameters => {
                   if (parameters.id) {
                     this.id = parameters.id;
-                    this.title = 'Actualizar elemento';
+                    this.title = 'Actualizar Automóvil';
 
                     this.dataService.isLoading.next(true);                                         
                     this.car.getSingleCar(parameters.id).subscribe(item => {
-<<<<<<< HEAD
-                      //this.formCar.patchValue(item);
-                      this.formCar.get('brand')?.setValue(item.brand);
-                      this.formCar.get('modelo')?.setValue(item.modelo);
-                      this.formCar.get('year')?.setValue(item.year);
-                      this.dataService.isLoading.next(false);
-                    });                 
-=======
                       this.formCar.patchValue(item);
                       /*this.formCar.get('brand')?.setValue(item.brand);
                       this.formCar.get('modelo')?.setValue(item.modelo);
                       this.formCar.get('year')?.setValue(item.year);*/
-                    });
-                  this.dataService.isLoading.next(false);
->>>>>>> 880e34da7378c9f5053a76f511938648133b7d4f
-                }
+                      this.dataService.isLoading.next(false);
+                    });                 
+                  }
                 });
               }
 
@@ -72,9 +62,9 @@ export class CarComponent implements OnInit {
       year: this.formCar.get('year')?.value
   } as Car;
 
-  if (this.id !== '') {
+  /*if (this.id !== '') {
     data._id = this.id;
-  }
+  }*/
 
   console.log(data);
 

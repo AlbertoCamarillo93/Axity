@@ -26,13 +26,10 @@ const routes: Routes = [
     path: 'car/:id',
     component: CarComponent
   },
-<<<<<<< HEAD
-=======
-  /*{
+  {
     path: 'car/:id/:erase',
     component: CarComponent
-  },*/
->>>>>>> 880e34da7378c9f5053a76f511938648133b7d4f
+  },
   {
     path: '**',
     redirectTo: 'login'

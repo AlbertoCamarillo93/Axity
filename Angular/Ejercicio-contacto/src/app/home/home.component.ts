@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
 
   erase(id: string): void {
     this.dataService.isLoading.next(true);
-    console.log(id);
+    //console.log(id);
     
     this.car.deleteCar(id).subscribe(eraseCar => {
       this.dataService.message.next("Auto elmininado");

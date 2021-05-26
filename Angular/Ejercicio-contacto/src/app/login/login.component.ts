@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginRequest } from '../model/login.model';
+import { LoginRequest, LoginResponse } from '../model/login.model';
 import { DataService } from '../services/data.service';
 import { LoginService } from '../services/login.service';
 
@@ -15,7 +14,10 @@ export class LoginComponent implements OnInit {
   formLogin: FormGroup = this.formBuilder.group({});
   disableButton = false;
 
-  constructor(private formBuilder: FormBuilder, private loginService: LoginService, private router: Router, private dataService: DataService) {
+  constructor(private formBuilder: FormBuilder, 
+              private loginService: LoginService, 
+              private router: Router, 
+              private dataService: DataService) {
     this.formLogin = this.formBuilder.group({
       username: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(3)]]
@@ -58,3 +60,7 @@ export class LoginComponent implements OnInit {
     }); 
   }
 }
+
+
+//Usuario -->eve.holt@reqres.in
+//PSS 1234
