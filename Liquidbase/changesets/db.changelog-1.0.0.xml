@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="cl-1" author="AlbertoCamarillo">
+        <createTable tableName="Catalogo">
+
+               <column name="id_producto" type="int">
+               <constraints primaryKey="true" unique="true"/>
+               </column>
+
+               <column name="Nombre" type="varchar">
+               <constraints primaryKey="false" unique="false"/>
+               </column>
+               
+               <column name="Descripcion" type="varchar">
+               <constraints primaryKey="false" unique="false"/>
+               </column>
+               
+               <column name="Precio" type="int">
+               <constraints primaryKey="false" unique="false"/>
+               </column>
+
+               <column name="Codigo" type="nvarchar(7)">
+               <constraints primaryKey="false" unique="false"/>
+               </column>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
