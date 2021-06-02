@@ -1,0 +1,24 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "VGb125",
+    "name": "DialogoBot",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "jkYZMZ"
+      },
+      "actions": []
+    }
+  ],
+  "generator": "DialogoBot.lg",
+  "recognizer": "DialogoBot.lu.qna",
+  "id": "DialogoBot"
+}

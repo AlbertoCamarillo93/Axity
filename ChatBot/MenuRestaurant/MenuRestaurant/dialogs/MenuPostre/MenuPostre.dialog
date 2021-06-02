@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "L3d9nd",
+    "name": "MenuPostre",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "v76xew"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "fhw4VM"
+          },
+          "activity": "${SendActivity_fhw4VM()}"
+        }
+      ]
+    }
+  ],
+  "generator": "MenuPostre.lg",
+  "recognizer": "MenuPostre.lu.qna",
+  "id": "MenuPostre"
+}

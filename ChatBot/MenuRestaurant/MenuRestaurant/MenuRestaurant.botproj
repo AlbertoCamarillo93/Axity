@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/main/Composer/packages/server/schemas/botproject.schema",
+  "name": "MenuRestaurant",
+  "skills": {
+    "menuGeneral1": {
+      "workspace": "../../MenuGeneral1/MenuGeneral1",
+      "remote": false
+    }
+  }
+}

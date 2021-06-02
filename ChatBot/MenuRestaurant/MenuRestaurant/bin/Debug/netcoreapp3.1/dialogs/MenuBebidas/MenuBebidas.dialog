@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Sa03Fs",
+    "name": "MenuBebidas",
+    "description": "menu de bebidas"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "O4SA9V"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "FayAwZ"
+          },
+          "activity": "${SendActivity_FayAwZ()}"
+        }
+      ]
+    }
+  ],
+  "generator": "MenuBebidas.lg",
+  "recognizer": "MenuBebidas.lu.qna",
+  "id": "MenuBebidas"
+}

@@ -1,0 +1,124 @@
+{
+  "azurePublish": {
+    "id": "azurePublish",
+    "name": "azurePublish",
+    "description": "Publish bot to an Azure Web App",
+    "version": "1.0.0",
+    "enabled": true,
+    "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/azurePublish",
+    "bundles": [
+      {
+        "id": "azurePublish",
+        "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/azurePublish/dist/publish.js"
+      },
+      {
+        "id": "azureFunctionsPublish",
+        "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/azurePublish/dist/publish.js"
+      }
+    ],
+    "contributes": {
+      "views": {
+        "publish": [
+          {
+            "bundleId": "publish"
+          }
+        ]
+      }
+    },
+    "builtIn": true
+  },
+  "localpublish": {
+    "id": "localpublish",
+    "name": "localpublish",
+    "description": "start and update the local test bot runtime",
+    "version": "1.0.0",
+    "enabled": true,
+    "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/localPublish",
+    "bundles": [],
+    "contributes": {},
+    "builtIn": true
+  },
+  "package-manager": {
+    "id": "package-manager",
+    "name": "package-manager",
+    "description": "Discover and use components that can be installed into your bot.",
+    "version": "1.0.0",
+    "enabled": true,
+    "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/packageManager",
+    "bundles": [
+      {
+        "id": "package-manager",
+        "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/packageManager/dist/Library.js"
+      }
+    ],
+    "contributes": {
+      "views": {
+        "pages": [
+          {
+            "bundleId": "package-manager",
+            "label": "Package manager",
+            "icon": "Library"
+          }
+        ]
+      }
+    },
+    "configurationSchema": {
+      "sources": {
+        "description": "Array of library sources.",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": [
+          "https://raw.githubusercontent.com/microsoft/botframework-components/main/experimental/feeds/components.json"
+        ]
+      }
+    },
+    "builtIn": true
+  },
+  "pva-publish-composer": {
+    "id": "pva-publish-composer",
+    "name": "pva-publish-composer",
+    "version": "1.0.0",
+    "enabled": true,
+    "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/pvaPublish",
+    "bundles": [
+      {
+        "id": "publish",
+        "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/pvaPublish/dist/publish.js"
+      }
+    ],
+    "contributes": {
+      "views": {
+        "publish": [
+          {
+            "bundleId": "publish"
+          }
+        ]
+      }
+    },
+    "builtIn": true
+  },
+  "plugin-runtimes": {
+    "id": "plugin-runtimes",
+    "name": "plugin-runtimes",
+    "description": "provide info about available runtimes",
+    "version": "1.0.0",
+    "enabled": true,
+    "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/runtimes",
+    "bundles": [],
+    "contributes": {},
+    "builtIn": true
+  },
+  "samples": {
+    "id": "samples",
+    "name": "samples",
+    "description": "providing samples to Composer core",
+    "version": "1.0.0",
+    "enabled": true,
+    "path": "/tmp/.mount_BotFraY1XqWX/resources/app.asar.unpacked/extensions/samples",
+    "bundles": [],
+    "contributes": {},
+    "builtIn": true
+  }
+}

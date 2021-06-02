@@ -1,0 +1,6 @@
+[import](common.lg)
+
+# TextInput_Prompt_SVPtLW()
+[Activity
+    Text = El restaurante cuenta con los siguientes menus
+]

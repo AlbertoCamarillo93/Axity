@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "storageConnections": [
+    {
+      "id": "default",
+      "name": "This PC",
+      "type": "LocalDisk",
+      "path": "",
+      "platform": "linux",
+      "defaultPath": "/home/axity"
+    }
+  ],
+  "recentBotProjects": [
+    {
+      "storageId": "default",
+      "path": "/home/axity/ConsultaClima/ConsultaClima"
+    },
+    {
+      "storageId": "default",
+      "path": "/home/axity/Peliculas/Peliculas"
+    },
+    {
+      "storageId": "default",
+      "path": "/home/axity/BotService/BotService"
+    },
+    {
+      "storageId": "default",
+      "path": "/home/axity/BotAzure/BotAzure"
+    },
+    {
+      "storageId": "default",
+      "path": "/home/axity/MenuGeneral/MenuGeneral"
+    },
+    {
+      "storageId": "default",
+      "path": "/home/axity/MenuRestaurant/MenuRestaurant"
+    }
+  ],
+  "projectLocationMap": {
+    "76898.06920612554": {
+      "eTag": "",
+      "path": "/home/axity/MenuRestaurant/MenuRestaurant"
+    },
+    "89654.02851046073": {
+      "eTag": "",
+      "path": "/home/axity/MenuGeneral/MenuGeneral"
+    },
+    "2656.5023570894077": {
+      "eTag": "",
+      "path": "/home/axity/MenuGeneral1/MenuGeneral1"
+    },
+    "79013.51255805536": {
+      "eTag": "",
+      "path": "/home/axity/Peliculas/Peliculas"
+    },
+    "99761.37813705418": {
+      "eTag": "",
+      "path": "/home/axity/BotService/BotService"
+    },
+    "21965.38476814305": {
+      "eTag": "",
+      "path": "/home/axity/BotAzure/BotAzure"
+    },
+    "82504.78421172216": {
+      "eTag": "",
+      "path": "/home/axity/ConsultaClima/ConsultaClima"
+    }
+  },
+  "featureFlags": {
+    "FORM_DIALOG": {
+      "displayName": "Form dialogs",
+      "description": "Automatically generate dialogs that collect information from a user to manage conversations.",
+      "documentationLink": "https://aka.ms/AAailpe",
+      "isHidden": false,
+      "enabled": false
+    }
+  },
+  "settings": {
+    "telemetry": {
+      "allowDataCollection": false
+    }
+  }
+}

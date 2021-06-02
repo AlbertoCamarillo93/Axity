@@ -1,0 +1,13 @@
+[import](common.lg)
+
+# SendActivity_fhw4VM()
+[Activity
+    Text = ${SendActivity_fhw4VM_text()}
+]
+
+# SendActivity_fhw4VM_text()
+- ```Los postres de hoy son:
+Flan
+Gelatina
+Pastel
+Helado```

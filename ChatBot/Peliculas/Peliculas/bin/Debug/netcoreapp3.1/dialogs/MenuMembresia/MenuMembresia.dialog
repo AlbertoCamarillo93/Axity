@@ -1,0 +1,102 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "jYWNRq",
+    "name": "MenuMembresia",
+    "description": "Menu de costos de membresias"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "zR4MY0"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "qIslK4"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_qIslK4()}",
+          "property": "user.memberType"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "pUZm9U"
+          },
+          "condition": "user.memberType",
+          "cases": [
+            {
+              "value": "Básica",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "ASjF4x"
+                  },
+                  "property": "user.memberSelect",
+                  "value": "Membrasía para una pantalla en calidad SD, con costo de $100 mensuales más IVA."
+                }
+              ]
+            },
+            {
+              "value": "Intermedia",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "vYnDlD"
+                  },
+                  "property": "user.memberSelect",
+                  "value": "Membresía para dos pantallas en HD, con costo de $150 mensuales más IVA."
+                }
+              ]
+            },
+            {
+              "value": "Premium",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "KPX0hu"
+                  },
+                  "property": "user.memberSelect",
+                  "value": "Membresía para 4 pantallas en FHD, con costo de $200 mensuales más IVA."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "IlokVe"
+          },
+          "activity": "${SendActivity_IlokVe()}"
+        },
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "NpBHAC"
+          },
+          "property": "user.memberType"
+        }
+      ]
+    }
+  ],
+  "generator": "MenuMembresia.lg",
+  "recognizer": "MenuMembresia.lu.qna",
+  "id": "MenuMembresia"
+}

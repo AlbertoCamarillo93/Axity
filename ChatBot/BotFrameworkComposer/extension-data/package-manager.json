@@ -1,0 +1,98 @@
+{
+  "recentlyUsed": [
+    {
+      "name": "Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime",
+      "version": "4.13.2",
+      "path": "/home/axity/.nuget/packages/microsoft.bot.builder.dialogs.adaptive.runtime/4.13.2/microsoft.bot.builder.dialogs.adaptive.runtime.nuspec",
+      "description": "Library for building Adaptive Runtime bots using the Bot Framework SDK",
+      "releaseNotes": "",
+      "authors": [
+        "Microsoft"
+      ],
+      "keywords": [
+        "bots",
+        "ai",
+        "botframework",
+        "botbuilder"
+      ],
+      "icon": "icon.png",
+      "repository": "https://github.com/Microsoft/botbuilder-dotnet",
+      "license": "",
+      "language": "c#",
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "includesSchema": true,
+      "includesExports": false,
+      "iconUrl": "data:image/png;base64,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"
+    },
+    {
+      "name": "Microsoft.Bot.Builder.AI.QnA",
+      "version": "4.13.2",
+      "path": "/home/axity/.nuget/packages/microsoft.bot.builder.ai.qna/4.13.2/microsoft.bot.builder.ai.qna.nuspec",
+      "description": "Classes for using QnA Maker Cognitive Service on the Microsoft Bot Builder SDK",
+      "releaseNotes": "",
+      "authors": [
+        "Microsoft"
+      ],
+      "keywords": [
+        "bots",
+        "ai",
+        "botframework",
+        "botbuilder"
+      ],
+      "icon": "icon.png",
+      "repository": "https://github.com/Microsoft/botbuilder-dotnet",
+      "license": "",
+      "language": "c#",
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "includesSchema": true,
+      "includesExports": false,
+      "iconUrl": "data:image/png;base64,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"
+    },
+    {
+      "name": "Microsoft.Bot.Builder.AI.Orchestrator",
+      "version": "4.13.1",
+      "path": "/home/axity/.nuget/packages/microsoft.bot.builder.ai.orchestrator/4.13.1/microsoft.bot.builder.ai.orchestrator.nuspec",
+      "description": "This library implements .NET support for Orchestrator",
+      "releaseNotes": "",
+      "authors": [
+        "Microsoft"
+      ],
+      "keywords": [
+        "msbot-component",
+        "msbot-recognizer"
+      ],
+      "icon": "icon.png",
+      "repository": "https://github.com/Microsoft/botbuilder-dotnet",
+      "license": "",
+      "language": "c#",
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "includesSchema": true,
+      "includesExports": false,
+      "iconUrl": "data:image/png;base64,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"
+    },
+    {
+      "name": "Microsoft.Bot.Builder.AI.Luis",
+      "version": "4.13.2",
+      "path": "/home/axity/.nuget/packages/microsoft.bot.builder.ai.luis/4.13.2/microsoft.bot.builder.ai.luis.nuspec",
+      "description": "LUIS Middleware and Recognizers for the Microsoft Bot Builder SDK",
+      "releaseNotes": "",
+      "authors": [
+        "Microsoft"
+      ],
+      "keywords": [
+        "bots",
+        "ai",
+        "botframework",
+        "botbuilder"
+      ],
+      "icon": "icon.png",
+      "repository": "https://github.com/Microsoft/botbuilder-dotnet",
+      "license": "",
+      "language": "c#",
+      "copyright": "© Microsoft Corporation. All rights reserved.",
+      "includesSchema": true,
+      "includesExports": false,
+      "iconUrl": "data:image/png;base64,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"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[import](common.lg)
+
+# TextInput_Prompt_qIslK4()
+[Activity
+    Text = La plataforma cuenta con las siguientes membresias:
+    SuggestedActions = Básica | Intermedia | Premium
+]
+
+# SendActivity_IlokVe()
+[Activity
+    Text = La membresía seleccionada es ${user.memberSelect}
+]

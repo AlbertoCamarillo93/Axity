@@ -1,0 +1,13 @@
+[import](common.lg)
+
+# SendActivity_FayAwZ()
+[Activity
+    Text = ${SendActivity_FayAwZ_text()}
+]
+
+# SendActivity_FayAwZ_text()
+- ```Menu Bebidas:
+Gaseosa
+Cerveza
+Agua de limón
+Agua de jamaica```

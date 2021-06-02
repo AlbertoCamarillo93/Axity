@@ -1,0 +1,11 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = Bienvenido a restaurante.
+]
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = Aún no cuento con esta respuesta.
+]

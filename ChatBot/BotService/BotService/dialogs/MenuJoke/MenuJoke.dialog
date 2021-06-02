@@ -1,0 +1,53 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "zSH5x6",
+    "name": "MenuJoke",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "53ILBP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "BtNjzK"
+          },
+          "resultProperty": "dialog.api_response_categories",
+          "method": "GET",
+          "responseType": "json",
+          "url": "https://api.chucknorris.io/jokes/categories"
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "txG4PH"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "itemsProperty": "dialog.api_response_categories.content",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "5PTW4z"
+              },
+              "activity": "${SendActivity_5PTW4z()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "MenuJoke.lg",
+  "recognizer": "MenuJoke.lu.qna",
+  "id": "MenuJoke"
+}

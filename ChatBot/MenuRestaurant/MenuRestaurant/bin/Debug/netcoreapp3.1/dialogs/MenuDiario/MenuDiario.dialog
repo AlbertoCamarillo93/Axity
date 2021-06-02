@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "3VBvSf",
+    "name": "MenuDiario",
+    "description": "menu del día de hoy"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "FzY6cV"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "KVyVkL"
+          },
+          "activity": "${SendActivity_KVyVkL()}"
+        }
+      ]
+    }
+  ],
+  "generator": "MenuDiario.lg",
+  "recognizer": "MenuDiario.lu.qna",
+  "id": "MenuDiario"
+}

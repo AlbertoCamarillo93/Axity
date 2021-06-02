@@ -1,0 +1,13 @@
+[import](common.lg)
+
+# SendActivity_KVyVkL()
+[Activity
+    Text = ${SendActivity_KVyVkL_text()}
+]
+
+# SendActivity_KVyVkL_text()
+- ```Menú hoy 
+Sopa 
+Arroz
+Bistek
+Flan```

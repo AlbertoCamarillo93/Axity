@@ -1,0 +1,12 @@
+[import](common.lg)
+
+# TextInput_Prompt_g1f00O()
+[Activity
+    Text = El restaurant maneja los siguientes menus
+    SuggestedActions = alimentos | bebidas | postres
+]
+
+# SendActivity_j0xh9W()
+[Activity
+    Text = El menu seleccionado es $[user.menuSeleccionado]
+]

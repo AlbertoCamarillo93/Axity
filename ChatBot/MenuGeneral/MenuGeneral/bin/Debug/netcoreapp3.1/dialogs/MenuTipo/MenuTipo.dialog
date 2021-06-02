@@ -1,0 +1,105 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "vxbzgH",
+    "name": "MenuTipo",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "fycUwh"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "g1f00O"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${TextInput_Prompt_g1f00O()}",
+          "property": "user.menuType"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "7wAKcq"
+          },
+          "default": [],
+          "condition": "user.menuType",
+          "cases": [
+            {
+              "value": "alimentos",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "lLFjab"
+                  },
+                  "property": "user.menuSeleccionado",
+                  "value": "Sopa, Arroz, Pasta"
+                }
+              ]
+            },
+            {
+              "value": "bebidas",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "Tz8FD5"
+                  },
+                  "property": "user.menuSeleccionado",
+                  "value": "Agua, Gaseosa, Cafe"
+                }
+              ]
+            },
+            {
+              "value": "postres",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "yaO3Go"
+                  },
+                  "property": "user.menuSeleccionado",
+                  "value": "Pastel, Flan, Helado"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "j0xh9W"
+          },
+          "activity": "${SendActivity_j0xh9W()}"
+        },
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "UCJipc"
+          },
+          "property": "user.menuType"
+        }
+      ]
+    }
+  ],
+  "generator": "MenuTipo.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "MenuTipo"
+}

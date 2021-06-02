@@ -1,0 +1,6 @@
+[import](common.lg)
+
+# SendActivity_5PTW4z()
+[Activity
+    Text = ${dialog.foreach.value} ${dialog.foreach.index}
+]
